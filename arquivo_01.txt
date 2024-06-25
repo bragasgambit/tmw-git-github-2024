@@ -1,4 +1,4 @@
 
 
 git clone <endereco do repositorio no github>                   # clona o repositorio do github na nuvem
-
+git push  <para onde eg origin> <qual branch eg main>           # empura do local para o remoto que foi clonado (quando origin) e na branch (main) que esta trabalhando
