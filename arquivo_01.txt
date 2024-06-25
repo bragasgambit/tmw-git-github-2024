@@ -1,0 +1,4 @@
+
+
+git clone <endereco do repositorio no github>                   # clona o repositorio do github na nuvem
+
