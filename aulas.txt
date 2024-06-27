@@ -42,3 +42,13 @@ git pull                                                        # esteja seguro 
 
 
 # fork - a partir de um repo de um terceiro, você garfa e usa como desejar (colab/melhora/etc)
+
+
+
+Git/GitHub Aula extra - gitignore e gitkeep
+
+Criar arquivo .gitignore
+No arquivo adicionar um arquivo (por linha) que não deseja ser versionado.
+
+Se uma extensão eg .csv nunca será versionada, então basta adicionar:
+*.csv          # se trata de um curinga, todo arquivo .csv será ignorado em [git add .]

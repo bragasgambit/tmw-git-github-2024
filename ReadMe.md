@@ -12,3 +12,7 @@ Instalação, branch, commit, merge
 ## Dia 02 - GitHub
 
 GitHub - git clone, pull, push, Pull Request, git workflow
+
+
+## Apêndice - gitignore e gitkeep
+

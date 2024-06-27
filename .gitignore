@@ -1,1 +1,4 @@
-dados.csv
+#dados.csv
+#arquivo específico
+*.csv
+#*.csv é um curinga - indica que qualquer arquivo .csv não será versionado
