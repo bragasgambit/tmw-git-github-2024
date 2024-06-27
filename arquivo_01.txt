@@ -35,4 +35,3 @@ git push  <para onde eg origin> <qual branch eg main>           # empura do loca
 git pull                                                        # esteja seguro que esteja na branch main e faca o pull do rep remoto
 
 ssh
-
