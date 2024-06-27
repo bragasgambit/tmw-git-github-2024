@@ -28,10 +28,17 @@ git branch -D <nome branch>      # deleta a branch desejada
 Git/GitHub Aula 02 - GitHub
 
 # sobe para o GitHub tudo que foi feito local (na feature), faz Pull Request para atualizar a main remota e atualiza o repositorio local com git pull
-# README: alteracoes na main sao feitas apenas no rep remoto via Pull Request!
+
+# Sempre que for clonar um repositorio no GitHub, pegue o link no Repositório remoto > <> Code > SSH
+ssh-keygen -t rsa                                               # criar chave ssh e dar Enter ate voltar ao input
+cat ~/.ssh/id_rsa.pub                                           # apos ter digitado a linha anterior escreve essa e copia o output e cola no GitHub o output do SSH gerado em Settings > SSH
+## Sempre que trocar ou formatar de PC, precisa fazer o processo novamente! (é igual uma chave e fechadura, se mudar a fechadura, tem que ter uma chave nova)
 
 git clone <endereco do repositorio no github>                   # clona o repositorio do github na nuvem
 git push  <para onde eg origin> <qual branch eg main>           # empura do local para o remoto que foi clonado (quando origin) e na branch (main) que esta trabalhando
 git pull                                                        # esteja seguro que esteja na branch main e faca o pull do rep remoto
 
-ssh
+# README: alteracoes na main devem ser feitas apenas no rep remoto via Pull Request!
+
+
+# fork - a partir de um repo de um terceiro, você garfa e usa como desejar (colab/melhora/etc)
