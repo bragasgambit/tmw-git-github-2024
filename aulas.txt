@@ -52,3 +52,6 @@ No arquivo adicionar um arquivo (por linha) que não deseja ser versionado.
 
 Se uma extensão eg .csv nunca será versionada, então basta adicionar:
 *.csv          # se trata de um curinga, todo arquivo .csv será ignorado em [git add .]
+
+
+Quando se deseja subir para o repositório remoto uma pasta com todos os arquivos ignorados pelo .gitignore, basta adicionar ao dir o .gitkeep que, mesmo "vazia" o dir será versionado
