@@ -34,4 +34,4 @@ git clone <endereco do repositorio no github>                   # clona o reposi
 git push  <para onde eg origin> <qual branch eg main>           # empura do local para o remoto que foi clonado (quando origin) e na branch (main) que esta trabalhando
 git pull                                                        # esteja seguro que esteja na branch main e faca o pull do rep remoto
 
-ssh 
+ssh
