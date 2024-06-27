@@ -1,4 +1,38 @@
+Git/GitHub Aula 01
 
+# unstage (nao esta no repositorio git) -> stage (prepara para dar commit) -> commited (versionado no git !local!)
+
+No bash
+pwd                              # mostra onde estou
+ls                               # lista o que tem no diretorio
+cd                               # muda de diretorio
+
+attrib -s -h -r /s /d            # no Windows para mostrar pastas ocultas (inicando com .)
+ls -a                            # no Linux para mostrar pastas ocultas
+
+git init .                       # cria novo repositorio git
+git status                       # ver status da branch atual
+git log                          # exibe historico de commits
+git add <arquivo>                # manda arquivo para stage (pre-commit) ie informa o que quer salvar
+git commit -m "Texto aqui"       # consolida o checkpoint
+git reset                        # retorna para unstage
+git reset idCommit               # retorna para pos-commit
+
+git branch                       # checa em qual ramificacao do projeto voce esta mexendo
+git checkout -b <nome branch>    # muda e cria uma nova ramificacao (sem o -b so muda de branch para uma existente)
+git merge <nome branch>          # junta os arquivos da branch que voce esta com a branch que voce selecionou
+git branch -D <nome branch>      # deleta a branch desejada
+
+
+
+Git/GitHub Aula 02 - GitHub
+
+# sobe para o GitHub tudo que foi feito local (na feature), faz Pull Request para atualizar a main remota e atualiza o repositorio local com git pull
+# README: alteracoes na main sao feitas apenas no rep remoto via Pull Request!
 
 git clone <endereco do repositorio no github>                   # clona o repositorio do github na nuvem
 git push  <para onde eg origin> <qual branch eg main>           # empura do local para o remoto que foi clonado (quando origin) e na branch (main) que esta trabalhando
+git pull                                                        # esteja seguro que esteja na branch main e faca o pull do rep remoto
+
+ssh
+
