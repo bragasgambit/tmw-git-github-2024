@@ -3,27 +3,27 @@ Git/GitHub Aula 01
 # unstage (nao esta no repositorio git) -> stage (prepara para dar commit) -> commited (versionado no git !local!)
 
 No bash
-pwd                              # mostra onde estou
-ls                               # lista o que tem no diretorio
-cd                               # muda de diretorio
+$ pwd                              # mostra onde estou
+$ ls                               # lista o que tem no diretorio
+$ cd                               # muda de diretorio
 
 attrib -s -h -r /s /d            # no Windows para mostrar pastas ocultas (inicando com .)
-ls -a                            # no Linux para mostrar pastas ocultas
+$ ls -a                            # no Linux para mostrar pastas ocultas
 
-git init .                       # cria novo repositorio git
-git status                       # ver status da branch atual
-git log                          # exibe historico de commits
-git add <arquivo>                # manda arquivo para stage (pre-commit) ie informa o que quer salvar
-git commit -m "Texto aqui"       # consolida o checkpoint
-git reset                        # retorna para unstage
-git reset idCommit               # retorna para pos-commit
+$ git init .                       # cria novo repositorio git
+$ git status                       # ver status da branch atual
+$ git log                          # exibe historico de commits
+$ git add <arquivo>                # manda arquivo para stage (pre-commit) ie informa o que quer salvar
+$ git commit -m "text here"        # consolida o checkpoint
+$ git reset                        # retorna para unstage
+$ git reset idCommit               # retorna para pos-commit
 
-git branch                       # checa em qual ramificacao do projeto voce esta mexendo
-git checkout -b <nome branch>    # muda e cria uma nova ramificacao (sem o -b so muda de branch para uma existente)
-git merge <nome branch>          # junta os arquivos da branch que voce esta com a branch que voce selecionou
-git branch -D <nome branch>      # deleta a branch desejada
+$ git branch                       # checa em qual ramificacao do projeto voce esta mexendo
+$ git checkout -b <nome branch>    # muda e cria uma nova ramificacao (sem o -b so muda de branch para uma existente)
+$ git merge <nome branch>          # junta os arquivos da branch que voce esta (geralmente na main) com a branch que voce selecionou (feature)
+$ git branch -D <nome branch>      # deleta a branch desejada
 
-
+[-b] = branch
 
 Git/GitHub Aula 02 - GitHub
 
@@ -34,9 +34,9 @@ ssh-keygen -t rsa                                               # criar chave ss
 cat ~/.ssh/id_rsa.pub                                           # apos ter digitado a linha anterior escreve essa e copia o output e cola no GitHub o output do SSH gerado em Settings > SSH
 ## Sempre que trocar ou formatar de PC, precisa fazer o processo novamente! (é igual uma chave e fechadura, se mudar a fechadura, tem que ter uma chave nova)
 
-git clone <endereco do repositorio no github>                   # clona o repositorio do github na nuvem
-git push  <para onde eg origin> <qual branch eg main>           # empura do local para o remoto que foi clonado (quando origin) e na branch (main) que esta trabalhando
-git pull                                                        # esteja seguro que esteja na branch main e faca o pull do rep remoto
+$ git clone <endereco do repositorio no github>                   # clona o repositorio do github na nuvem
+$ git push  <para onde eg origin> <qual branch eg main>           # empura do local para o remoto que foi clonado (quando origin) e na branch (main) que esta trabalhando
+$ git pull                                                        # esteja seguro que esteja na branch main e faca o pull do rep remoto
 
 # README: alteracoes na main devem ser feitas apenas no rep remoto via Pull Request!
 
@@ -55,3 +55,19 @@ Se uma extensão eg .csv nunca será versionada, então basta adicionar:
 
 
 Quando se deseja subir para o repositório remoto uma pasta com todos os arquivos ignorados pelo .gitignore, basta adicionar ao dir o .gitkeep que, mesmo "vazia" o dir será versionado
+
+$ git cherry-pick [commit] || [whole-branch]                # Pega apenas um commit específico - usa o git log (ou git graph) para saber o endereço do commit
+
+/ git rebase explanation:
+o---o---o---o---o  main
+         \
+          o---o---o---o---o  feature
+
+$ git rebase
+o---o---o---o---o---o'---o'---o'---o'---o' main
+
+
+$ git merge
+o---o---o---o---o------------o  main
+         \                  /
+          o---o---o---o---o  feature
