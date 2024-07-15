@@ -6,8 +6,15 @@ No bash
 $ pwd                              # mostra onde estou
 $ ls                               # lista o que tem no diretorio
 $ cd                               # muda de diretorio
+$ touch [filename]                 # cria um arquivo
+$ &&                               # operador que executa múltiplos comandos
+$ mv [filename] [filename]         # renomeia um arquivo
+$ cat [filename]                   # mostra o conteúdo do arquivo
+$ cat > [filename]                 # cria um arquivo
+$ echo "Hello World" > [filename]  # cria/escreve uma linha de texto arquivo e escreve "Hello World" no arquivo criado 
 
-attrib -s -h -r /s /d            # no Windows para mostrar pastas ocultas (inicando com .)
+
+attrib -s -h -r /s /d              # no Windows para mostrar pastas ocultas (inicando com .)
 $ ls -a                            # no Linux para mostrar pastas ocultas
 
 $ git init .                       # cria novo repositorio git
@@ -56,7 +63,19 @@ Se uma extensão eg .csv nunca será versionada, então basta adicionar:
 
 Quando se deseja subir para o repositório remoto uma pasta com todos os arquivos ignorados pelo .gitignore, basta adicionar ao dir o .gitkeep que, mesmo "vazia" o dir será versionado
 
-$ git cherry-pick [commit] || [whole-branch]                # Pega apenas um commit específico - usa o git log (ou git graph) para saber o endereço do commit
+/ git cherry-pick [commit] || [whole-branch]                # Pega apenas um commit específico - usa o git log (ou git graph) para saber o endereço do commit (usando git log)
+a - b - c - d   Main
+         \
+           e - f - g Feature
+supondo que o commit f deseja ser passado para a main:
+1: garantir que está na main
+$ git checkout main 
+2: através do git log ou git reflog pegar o commit ID
+$ git cherry-pick [f]
+a - b - c - d - f   Main
+         \
+           e - f - g Feature
+
 
 / git rebase explanation:
 o---o---o---o---o  main
