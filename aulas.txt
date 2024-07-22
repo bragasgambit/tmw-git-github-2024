@@ -63,6 +63,10 @@ Se uma extensão eg .csv nunca será versionada, então basta adicionar:
 
 Quando se deseja subir para o repositório remoto uma pasta com todos os arquivos ignorados pelo .gitignore, basta adicionar ao dir o .gitkeep que, mesmo "vazia" o dir será versionado
 
+```sh
+git add -A && git commit --amend --no-edit  && git push -f
+```
+
 / git cherry-pick [commit] || [whole-branch]                # Pega apenas um commit específico - usa o git log (ou git graph) para saber o endereço do commit (usando git log)
 a - b - c - d   Main
          \
