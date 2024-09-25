@@ -1,8 +1,8 @@
 # Git e GitHub
 
 
-ssh-keygen -t rsa                                               # ssh keygen
-cat ~/.ssh/id_rsa.pub                                           # cat the ssh, copy and paste the output on GitHub
+``` ssh-keygen -t rsa ``` &nbsp; ssh keygen <br>
+``` cat ~/.ssh/id_rsa.pub ``` &nbsp; cat the ssh, copy and paste the output on GitHub
 
 
 Aula de git e github do TeoMeWhy
